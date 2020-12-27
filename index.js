@@ -1,13 +1,12 @@
 const { executionAsyncResource } = require('async_hooks');
 const Discord = require('discord.js');
 const { measureMemory } = require('vm');
-const ytdl = require('ytdl-core');
 const fs = require('fs')
 
 const { YTSearcher } = require('ytsearcher');
 
 const searcher = new YTSearcher({
-    key: "AIzaSyDsGp7lYJOOd5EI2Rw42QYM_K7SZp1Iph4",
+    key: process.env.YOUTUBE_API,
     revealed: true
 });
 
@@ -50,7 +49,7 @@ client.on("guildMemberAdd", member => {
 
 
 client.on("message", async(message) => {
-    const prefix = '!';
+    const prefix = 'c!';
 
     if(!message.content.startsWith(prefix)) return
     
