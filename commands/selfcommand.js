@@ -31,7 +31,7 @@ function promo(message, args, rolename = ""){
         return message.channel.send("You already have that role")
 
     message.member.roles.add(role);
-    message.react("785179671041671168")
+    message.react("792503139998760972")
 }
 
 module.exports.config = {
